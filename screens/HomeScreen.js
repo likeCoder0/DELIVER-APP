@@ -14,6 +14,7 @@ import {
   UserIcon,
   MagnifyingGlassIcon,
 } from "react-native-heroicons/outline";
+import Categories from "../components/Categories";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -24,7 +25,7 @@ const HomeScreen = () => {
     });
   }, []);
   return (
-    <SafeAreaView className="bg-white pt-5">
+    <SafeAreaView className="bg-white pt-7">
       {/* Header */}
       <View className="flex-row pb-3 items-center mx-4 space-x-2">
         <Image
@@ -54,8 +55,9 @@ const HomeScreen = () => {
         <AdjustmentsVerticalIcon color="#00CCBB" />
       </View>
       {/* Body */}
-      <ScrollView>
+      <ScrollView className='bg-gray-100'>
         {/* Categories */}
+        <Categories/>
         {/* Featured Rows */}
       </ScrollView>
     </SafeAreaView>
